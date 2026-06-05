@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Subash · ECE Portfolio</title>
+  <meta name="description" content="ECE Engineer Portfolio - VLSI, Embedded Systems, Signal Processing" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Stars background -->
+  <canvas id="stars"></canvas>
+
+  <!-- Phone section -->
+  <section id="phone-section">
+    <div class="section-label">/ portfolio.os</div>
+
+    <div class="phone-stage">
+      <!-- Left side -->
+      <aside class="stage-side stage-side--left" id="desc-left">
+        <div class="desc-item" data-app="about">
+          <span class="desc-dot"></span>
+          <div>
+            <h3>About Me</h3>
+            <p>Who I am, where I study, what drives me.</p>
+          </div>
+        </div>
+        <div class="desc-item" data-app="skills">
+          <span class="desc-dot"></span>
+          <div>
+            <h3>Skills</h3>
+            <p>Hardware, software, and tools I master.</p>
+          </div>
+        </div>
+        <div class="desc-item" data-app="projects">
+          <span class="desc-dot"></span>
+          <div>
+            <h3>Projects</h3>
+            <p>Real builds. Real circuits. Real code.</p>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Phone center -->
+      <div class="stage-center">
+      <div class="phone" id="phone">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen" id="phoneScreen">
+
+            <!-- Lock screen -->
+            <div class="lockscreen phone-wallpaper" id="lockscreen">
+              <div class="ls-status">
+                <span id="ls-time">09:41</span>
+                <span class="ls-signal">ECE ▲▲▲</span>
+              </div>
+              <div class="lock-content">
+                <p class="lock-eyebrow">electronics &amp; communication engineer</p>
+                <h1 class="lock-name">M Subash</h1>
+                <p class="lock-sub">Every pulse has a purpose. Every signal, a story</p>
+              </div>
+              <button class="unlock-btn" id="unlockBtn" type="button" aria-label="Tap to unlock">
+                <span class="unlock-label">tap to unlock</span>
+                <span class="unlock-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v10"/><path d="M8 10h8"/><circle cx="12" cy="16" r="6"/></svg>
+                </span>
+              </button>
+            </div>
+
+            <!-- Homescreen -->
+            <div class="homescreen phone-wallpaper" id="homescreen">
+              <div class="hs-status">
+                <span id="hs-time">09:41</span>
+                <span class="hs-signal">ECE ▲▲▲</span>
+              </div>
+              <div class="hs-clock">
+                <div class="hs-big-time" id="hs-big-time">09:41</div>
+                <div class="hs-date" id="hs-date">FRIDAY · JUN 05</div>
+              </div>
+              <div class="hs-apps">
+                <button class="app-icon" data-app="about" onclick="openApp('about')">
+                  <div class="app-bubble" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                  </div>
+                  <span>About</span>
+                </button>
+                <button class="app-icon" data-app="skills" onclick="openApp('skills')">
+                  <div class="app-bubble" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  </div>
+                  <span>Skills</span>
+                </button>
+                <button class="app-icon" data-app="projects" onclick="openApp('projects')">
+                  <div class="app-bubble" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </div>
+                  <span>Projects</span>
+                </button>
+                <button class="app-icon" data-app="experience" onclick="openApp('experience')">
+                  <div class="app-bubble" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+                  </div>
+                  <span>Experience</span>
+                </button>
+                <button class="app-icon" data-app="contact" onclick="openApp('contact')">
+                  <div class="app-bubble" style="background:linear-gradient(135deg,#fa709a,#fee140)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 11.9 19.79 19.79 0 0 1 1.08 3.27 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <span>Contact</span>
+                </button>
+                <button class="app-icon" data-app="resume" onclick="openApp('resume')">
+                  <div class="app-bubble" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  </div>
+                  <span>Resume</span>
+                </button>
+              </div>
+              <div class="hs-tap-hint">tap an app</div>
+              <div class="hs-dock">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+            </div>
+
+            <!-- App Screens -->
+
+            <!-- ABOUT -->
+            <div class="app-screen" id="app-about">
+              <div class="app-header" style="--accent:#764ba2">
+                <button class="back-btn" onclick="closeApp('about')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>About Me</span>
+              </div>
+              <div class="app-body">
+                <div class="about-avatar">MS</div>
+                <h2 class="about-name">M Subash</h2>
+                <p class="about-tag">ECE Engineer · Batch of 2027</p>
+                <div class="about-bio">
+                  Motivated Electronics and Communication engineering student with a strong interest in embedded systems, artificial intelligence, and automotive technologies. Experienced in developing practical projects and eager to contribute to innovative technology-driven teams.
+                </div>
+                <div class="info-list">
+                  <div class="info-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    <div>
+                      <span class="info-label">Degree</span>
+                      <span class="info-val">B.Tech. Electronics &amp; Communication Engineering</span>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    <div>
+                      <span class="info-label">Institution</span>
+                      <span class="info-val">SRM Institute of Science and Technology, Tamil Nadu</span>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <div>
+                      <span class="info-label">CGPA</span>
+                      <span class="info-val">7.9 / 10.0</span>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <div>
+                      <span class="info-label">Location</span>
+                      <span class="info-val">Tamil Nadu · Open to Relocation</span>
+                    </div>
+                  </div>
+                  <div class="info-row">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    <div>
+                      <span class="info-label">Interests</span>
+                      <span class="info-val">VLSI · Embedded Systems · Artificial Intelligence · Automotive Electronics</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SKILLS -->
+            <div class="app-screen" id="app-skills">
+              <div class="app-header" style="--accent:#f5576c">
+                <button class="back-btn" onclick="closeApp('skills')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Skills</span>
+              </div>
+              <div class="app-body">
+                <div class="skill-section">
+                  <div class="skill-section-label">⚡ Hardware</div>
+                  <div class="pills">
+                    <span class="pill pill--pink">VLSI Design</span>
+                    <span class="pill pill--pink">Arduino &amp ESP 32</span>
+                    <span class="pill pill--pink">Verilog / VHDL</span>
+                    
+                    
+                   
+                  </div>
+                </div>
+                <div class="skill-section">
+                  <div class="skill-section-label">💻 Software &amp; Programming</div>
+                  <div class="pills">
+                    <span class="pill pill--blue">Python</span>
+                    <span class="pill pill--blue">C Language</span>
+                    <span class="pill pill--blue">HTML &amp CSS</span>
+                    <span class="pill pill--blue">MATLAB</span>
+                    <span class="pill pill--blue">Raspberry Pi</span>
+                    
+                  </div>
+                </div>
+                <div class="skill-section">
+                  <div class="skill-section-label">🛠 Tools &amp; Platforms</div>
+                  <div class="pills">
+                    
+                    <span class="pill pill--green">Xilinx Vivado</span>
+                    <span class="pill pill--green">Modelsim</span>
+                    <span class="pill pill--green">LTspice</span>
+                    <span class="pill pill--green">AutoCad</span>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="app-screen" id="app-projects">
+              <div class="app-header" style="--accent:#00f2fe">
+                <button class="back-btn" onclick="closeApp('projects')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Projects</span>
+              </div>
+              <div class="app-body">
+                <div class="proj-card">
+                  <div class="proj-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+                  </div>
+                  <div class="proj-info">
+                    <h3>AI-powered Crop Recommendation Engine
+                      with IoT Sensors + Chatbot
+                       </h3>
+                    <p>IoT-based real-time energy monitoring with ESP32 + MQTT protocol. Sends alerts and logs to cloud dashboard.</p>
+                    <div class="proj-tags">
+                      <span>ESP32</span><span>IoT</span><span>MQTT</span><span>Python</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="proj-card">
+                  <div class="proj-icon" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                  </div>
+                  <div class="proj-info">
+                    <h3>AI Virtual Mouse Using Hand Gesture </h3>
+                    <p>Built an AI-based virtual mouse using MediaPipe and OpenCV, enabling real-time hand gesture control for touch-free and accessible human–computer interaction.</p>
+                    <div class="proj-tags">
+                      <span>Python</span><span>OpenCV</span><span>MediaPipe</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="proj-card">
+                  <div class="proj-icon" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 6l5 6-5 6"/><path d="M23 6l-5 6 5 6"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                  </div>
+                  <div class="proj-info">
+                    <h3>Anomaly Detection in Road CCTV Footage using Edge AI </h3>
+                    <p>Developed an Edge AI–based road anomaly detection system for Raspberry Pi Zero 2W using lightweight deep learning models. Optimized on-device inference through knowledge distillation and integrated a Streamlit dashboard for remote monitoring.</p>
+                    <div class="proj-tags">
+                      <span>Raspberry Pi Zero 2W</span><span>Edge AI</span>
+                  </div>
+                </div>
+                 </div>
+                 </div>
+                 </div>
+
+
+                  
+              </div>
+            </div>
+  
+
+            <!-- EXPERIENCE -->
+            <div class="app-screen" id="app-experience">
+              <div class="app-header" style="--accent:#43e97b">
+                <button class="back-btn" onclick="closeApp('experience')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Experience</span>
+              </div>
+              <div class="app-body">
+                <div class="timeline">
+                  <div class="tl-item">
+                    <div class="tl-left">
+                      <div class="tl-dot" style="background:#43e97b; box-shadow:0 0 8px #43e97b88"></div>
+                      <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-right">
+                      <span class="tl-period">Dec 2024</span>
+                      <h3 class="tl-role">Internship</h3>
+                      <span class="tl-company">Titan Company Limited</span>
+                      <p class="tl-desc">Completed an R&D internship with exposure to industrial engineering and product development, showcasing strong adaptability, learning ability, and task execution skills.</p>
+                      
+                    </div>
+                  </div>
+                  <div class="tl-item">
+                    <div class="tl-left">
+                      <div class="tl-dot" style="background:#4facfe; box-shadow:0 0 8px #4facfe88"></div>
+                      <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-right">
+                      <span class="tl-period">June 2025</span>
+                      <h3 class="tl-role">Internship</h3>
+                      <span class="tl-company">Mistral Solutions Pvt Ltd</span>
+                      <p class="tl-desc">Embedded Design Intern at Mistral Solutions Pvt. Ltd., with hands-on exposure to industry-standard embedded system
+                        development practices and successful completion of assigned technical tasks.</p>
+                      
+                    </div>
+                  </div>
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="app-screen" id="app-contact">
+              <div class="app-header" style="--accent:#fee140">
+                <button class="back-btn" onclick="closeApp('contact')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Contact</span>
+              </div>
+              <div class="app-body">
+                <p class="contact-intro">Let's build something extraordinary together.</p>
+                <a class="contact-link" href="mailto:yourname@gmail.com">
+                  <div class="contact-icon" style="background:rgba(250,112,154,0.2); color:#fa709a">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-val">subashmuniappan28@gmail.com</span>
+                  </div>
+                  <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="contact-link" href="https://linkedin.com/in/subash2850" target="_blank" rel="noopener">
+                  <div class="contact-icon" style="background:rgba(79,172,254,0.2); color:#4facfe">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-val">linkedin.com/in/subash2850</span>
+                  </div>
+                  <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="contact-link" href="https://github.com/mad-on-drive" target="_blank" rel="noopener">
+                  <div class="contact-icon" style="background:rgba(255,255,255,0.1); color:#fff">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-val">github.com/mad-on-drive</span>
+                  </div>
+                  <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="contact-link" href="tel:+918667281489">
+                  <div class="contact-icon" style="background:rgba(67,233,123,0.2); color:#43e97b">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 11.9 19.79 19.79 0 0 1 1.08 3.27 2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-val">+91 8667281489</span>
+                  </div>
+                  <svg class="contact-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- RESUME -->
+            <div class="app-screen" id="app-resume">
+              <div class="app-header" style="--accent:#a18cd1">
+                <button class="back-btn" onclick="closeApp('resume')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <span>Resume</span>
+              </div>
+              <div class="app-body">
+                <div class="resume-preview">
+                  <div class="resume-header-block">
+                    <div class="resume-avatar">MS</div>
+                    <div>
+                      <div class="resume-name">M Subash</div>
+                      <div class="resume-deg">B.Tech. ECE · 2027</div>
+                    </div>
+                  </div>
+                  <div class="resume-stats">
+                    <div class="r-stat"><span class="r-num">7.9</span><span class="r-lbl">CGPA</span></div>
+                    <div class="r-stat"><span class="r-num">3+</span><span class="r-lbl">Projects</span></div>
+                    <div class="r-stat"><span class="r-num">2</span><span class="r-lbl">Internships</span></div>
+                  </div>
+                </div>
+                <a class="dl-btn" href="resume.pdf" download="YourName_Resume.pdf">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download Resume PDF
+                </a>
+                <div class="resume-note">PDF opens in a new tab · Replace resume.pdf in the folder with your actual resume</div>
+              </div>
+            </div>
+
+          </div><!-- end phoneScreen -->
+        </div><!-- end phone-frame -->
+      </div><!-- end phone -->
+
+      <!-- Right side -->
+      <div class="stage-side stage-side--right" id="desc-right" style="margin-top:130px;">
+        <div class="desc-item" data-app="experience">
+          <span class="desc-dot"></span>
+          <div>
+            <h3>Experience</h3>
+            <p>Internships, research, and leadership roles.</p>
+          </div>
+        </div>
+        <div class="desc-item" data-app="contact">
+          <span class="desc-dot"></span>
+          <div>
+            <h3>Contact</h3>
+            <p>Let's connect and build together.</p>
+          </div>
+        </div>
+        <div class="desc-item" data-app="resume">
+          <span class="desc-dot"></span>
+          <div>
+            <h3>Resume</h3>
+            <p>One-tap download. Always up to date.</p>
+          </div>
+        </div>
+      </div>
+    </div><!-- end phone-stage -->
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-mono">built with ♥ by M Subash· ECE · 2027</span>
+    <div class="footer-links">
+      <a href="https://github.com/mad-on-drive" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/subash2850" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:subashmuniappan28@gmail.com">Email</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
