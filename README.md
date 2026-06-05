@@ -2,32 +2,6 @@
 
 A dark futuristic portfolio website styled as a mobile OS, where each "app" reveals a section of your profile.
 
-## 🚀 Deploy to GitHub Pages (5 steps)
-
-1. **Create a new GitHub repo** named `yourname.github.io`  
-   (replace `yourname` with your actual GitHub username)
-
-2. **Upload all files** — drag the entire folder contents into the repo  
-   Make sure the file structure looks like:
-   ```
-   index.html
-   css/
-     style.css
-   js/
-     main.js
-   resume.pdf        ← ADD YOUR ACTUAL RESUME HERE
-   README.md
-   ```
-
-3. **Go to Settings → Pages**  
-   Set Source to `Deploy from a branch` → `main` → `/ (root)`
-
-4. **Click Save** — your site will be live at:  
-   `https://yourname.github.io`
-
-5. ✅ Done! Share the link with interviewers.
-
----
 
 ## ✏️ Customise Your Content
 
