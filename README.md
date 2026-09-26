@@ -10,12 +10,9 @@ Open `index.html` and find/replace these placeholders:
 | Placeholder | Replace with |
 |---|---|
 | `M Subash` | Your actual name |
-| `YN` (avatar initials) | Your initials |
-| `Your College Name` | Your college |
-| `yourname@gmail.com` | Your email |
-| `yourname` in GitHub/LinkedIn links | Your handles |
-| `+91 98XXX XXXXX` | Your phone number |
-| `8.9` CGPA | Your actual CGPA |
+| `MS` (avatar initials) | Your initials |
+| `SRMIST` | Your college |
+| `M SUBASH` in GitHub/LinkedIn links | Your handles |
 
 Update the **Projects** and **Experience** sections with your real work.
 
