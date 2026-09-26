@@ -9,7 +9,7 @@ Open `index.html` and find/replace these placeholders:
 
 | Placeholder | Replace with |
 |---|---|
-| `Your Name` | Your actual name |
+| `M Subash` | Your actual name |
 | `YN` (avatar initials) | Your initials |
 | `Your College Name` | Your college |
 | `yourname@gmail.com` | Your email |
